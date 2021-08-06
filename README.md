@@ -1,6 +1,9 @@
 # GetaGamesDevTest
 Este es el repositorio para la prueba técnica de desarrollador en Unity.
 
+## Third Party Models:
+* [Clock](https://assetstore.unity.com/packages/3d/props/interior/clock-4250)
+
 ## Progreso
  1.  Crear una interfaz gráfica que me permita desde una escena “MainMenu” ir
      a una escena de juego “Gameplay” y al terminar el juego volver a la
