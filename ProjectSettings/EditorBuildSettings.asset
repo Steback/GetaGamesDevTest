@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Loading.unity
     guid: 46c82f5a28f5590f28f02b69f6d482c9
   - enabled: 1
-    path: Assets/Scenes/TrackScene.unity
+    path: Assets/Scenes/GamePlay.unity
     guid: e0f0e128ba25d8bf0bf80117a59c1763
   m_configObjects: {}
