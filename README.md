@@ -61,3 +61,10 @@ un corto periodo de tiempo.
    jugador. Por ejemplo, cuantas carreras jugadas, cuantas ganadas, cuál es el
    récord de la vuelta, etc.
 ![Player Data](Images/PlayerInfo.png)
+   
+## Sonidos
+* [Loop](https://freesound.org/people/Flick3r/sounds/45610/)
+* [Obstaculo](https://freesound.org/people/squareal/sounds/237375/)
+* [Speed Boost](https://freesound.org/people/Eponn/sounds/420998/)
+* [Time Boosts](https://freesound.org/people/InspectorJ/sounds/398194/)
+* [Jump Boost](https://freesound.org/people/sharesynth/sounds/341246/)
