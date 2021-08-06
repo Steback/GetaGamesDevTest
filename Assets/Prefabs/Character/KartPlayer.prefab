@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 1736449302}
   - component: {fileID: 2064646697}
   - component: {fileID: 2064646700}
+  - component: {fileID: 9137717718319540832}
   m_Layer: 2
   m_Name: KartPlayer
   m_TagString: Player
@@ -439,9 +440,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861b5fc4f9c046cf18f6cf57e0ee0845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endGameObserver: {fileID: 0}
   timeRemaining: 20
   text: {fileID: 0}
 --- !u!65 &2064646700
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689069707135992351}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.5, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &9137717718319540832
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

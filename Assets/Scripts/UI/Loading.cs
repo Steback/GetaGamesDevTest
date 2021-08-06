@@ -28,7 +28,7 @@ namespace UI
         IEnumerator Waiter()
         {
             yield return new WaitForSeconds(3);
-            SceneManager.LoadScene("Scenes/TrackScene");
+            SceneManager.LoadScene("Scenes/GamePlay");
         }
     }
 }
