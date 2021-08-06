@@ -27,3 +27,6 @@ Este es el repositorio para la prueba técnica de desarrollador en Unity.
    
 * Control por teclado del kart.
 ![Fixed Camera in Kart Move](Images/FixedCamera.png)
+  
+* Tiempo en UI que va decreciendo segundo a segundo.
+![Time Remaining in UI](Images/TimeRemaining.png)
