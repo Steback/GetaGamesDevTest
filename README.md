@@ -56,3 +56,8 @@ un corto periodo de tiempo.
   
 * Salto: Añadir un sistema de salto en la pista.
 ![Jump Boost](Images/JumpBoost.png)
+  
+4. Guardar información de la sesión y de estadísticas que va llevando el
+   jugador. Por ejemplo, cuantas carreras jugadas, cuantas ganadas, cuál es el
+   récord de la vuelta, etc.
+![Player Data](Images/PlayerInfo.png)
