@@ -38,4 +38,9 @@ Este es el repositorio para la prueba técnica de desarrollador en Unity.
   permitir seguir jugando (El grafico, la distribución, y la cantidad de tiempo y
   de objetos en la pista queda a elección del candidato).
  ![Time Boosts](Images/TimeBoost.png)
+  
+* El jugador ganará cuando complete una vuelta antes de que el tiempo sea
+  cero. Deberá haber algún elemento gráfico o de UI que evidencia el resultado
+  del juego (Si ganó o perdió)
+![End Game](Images/EndGame.png)  
 
