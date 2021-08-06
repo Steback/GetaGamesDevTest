@@ -7,6 +7,8 @@ namespace Gameplay
     {
         private Transform _transform;
         private float _yPosition;
+        private bool _penaltyActivated = false;
+        private float _penaltyTimeRemaining;
 
         [SerializeField] public float speed;
         [SerializeField] public float angularVelocity;
@@ -21,6 +23,19 @@ namespace Gameplay
         // Update is called once per frame
         void Update()
         {
+            if (_penaltyActivated)
+            {
+                if (_penaltyTimeRemaining <= 0)
+                {
+                    _penaltyActivated = false;
+                }
+                else
+                {
+                    _penaltyTimeRemaining -= Time.deltaTime;
+                    return;
+                }
+            }
+            
             Vector3 rotation = Vector3.zero;
             Vector3 position = _transform.position;
             rotation.y = _transform.eulerAngles.y;
@@ -48,6 +63,20 @@ namespace Gameplay
             _transform.eulerAngles = rotation;
             position.y = _yPosition;
             _transform.position = position;
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (_penaltyActivated) return;
+
+            Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
+
+            if (obstacle)
+            {
+                _penaltyActivated = true;
+                _penaltyTimeRemaining = obstacle.penaltyTime;
+                Object.Destroy(other.gameObject);
+            }
         }
     }
 }
