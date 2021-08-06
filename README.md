@@ -53,3 +53,6 @@ Este es el repositorio para la prueba técnica de desarrollador en Unity.
 * Aceite u obstáculo: Al ser tocado el kart pierde el control durante
 un corto periodo de tiempo.
 ![Obstacle](Images/Obstacle.png)  
+  
+* Salto: Añadir un sistema de salto en la pista.
+![Jump Boost](Images/JumpBoost.png)
