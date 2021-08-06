@@ -20,3 +20,10 @@ Este es el repositorio para la prueba técnica de desarrollador en Unity.
 
 * Gameplay 
 ![Gameplay Image](Images/Gameplay.png)
+  
+2. En el “Gameplay” crear un modo de juego en que el jugador controle un Kart
+   que se moverá a través de un circuito. Debe cumplir con las
+   siguientes características:
+   
+* Control por teclado del kart.
+![Fixed Camera in Kart Move](Images/FixedCamera.png)
