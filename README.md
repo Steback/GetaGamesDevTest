@@ -32,4 +32,10 @@ Este es el repositorio para la prueba técnica de desarrollador en Unity.
 ![Fixed Camera in Kart Move](Images/FixedCamera.png)
   
 * Tiempo en UI que va decreciendo segundo a segundo.
-![Time Remaining in UI](Images/TimeRemaining.png)
+![Remaining Time in UI](Images/TimeRemaining.png)
+  
+* Distribución de un objeto que al ser tomado por el kart sumará tiempo para
+  permitir seguir jugando (El grafico, la distribución, y la cantidad de tiempo y
+  de objetos en la pista queda a elección del candidato).
+ ![Time Boosts](Images/TimeBoost.png)
+
