@@ -9,16 +9,10 @@ namespace Gameplay
     public class TimeCounter : MonoBehaviour
     {
         private readonly string defaultText = "Tiempo: ";
-        private Collider _collider;
 
         [SerializeField] public GameObject endGameObserver;
         [SerializeField] public float timeRemaining;
         [SerializeField] public Text text;
-
-        private void Awake()
-        {
-            _collider = GetComponent<Collider>();
-        }
 
         // Update is called once per frame
         void Update()
