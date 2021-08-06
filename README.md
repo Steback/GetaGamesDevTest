@@ -49,4 +49,7 @@ Este es el repositorio para la prueba técnica de desarrollador en Unity.
 * Turbo o aumento de velocidad: Al ser tocado el kart aumentará su velocidad
   durante un corto periodo de tiempo.
 ![Speed Boost](Images/SpeedBoost.png)
-
+  
+* Aceite u obstáculo: Al ser tocado el kart pierde el control durante
+un corto periodo de tiempo.
+![Obstacle](Images/Obstacle.png)  
