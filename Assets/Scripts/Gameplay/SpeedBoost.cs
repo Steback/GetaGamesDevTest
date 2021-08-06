@@ -15,6 +15,7 @@ namespace Gameplay
         {
             if (!_wasBoosted)
             {
+                GetComponent<AudioSource>().Play();
                 _wasBoosted = true;
                 _initialSpeed = speed;
                 speed += (speed * (boostPercentage / 100));

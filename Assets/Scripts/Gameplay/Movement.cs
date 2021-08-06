@@ -61,6 +61,7 @@ namespace Gameplay
                 {
                     _penaltyActivated = true;
                     _penaltyTimeRemaining = obstacle.penaltyTime;
+                    other.gameObject.GetComponent<AudioSource>().Play();
                     Object.Destroy(other.gameObject);
                 }
             }
@@ -71,6 +72,7 @@ namespace Gameplay
 
                 if (jumpBoost)
                 {
+                    jumpBoost.gameObject.GetComponent<AudioSource>().Play();
                     _jumpActivated = true;
                     _distanceJump = jumpBoost.distanceJump;
                     Object.Destroy(other.gameObject);
@@ -108,7 +110,6 @@ namespace Gameplay
             {
                 if (_currentYPosition < _distanceJump)
                 {
-                    print("Jump!");
                     _currentYPosition += speed * Time.deltaTime;
                 }
                 else

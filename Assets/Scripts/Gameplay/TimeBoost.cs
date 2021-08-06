@@ -11,6 +11,9 @@ namespace Gameplay
         {
             if (!_timeIncremented)
             {
+                AudioSource audioSource = GetComponent<AudioSource>();
+                print(audioSource);
+                audioSource.Play();
                 _timeIncremented = true;
                 timeRemaining += 5f;
                 Object.Destroy(gameObject);

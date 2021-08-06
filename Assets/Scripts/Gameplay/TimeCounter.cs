@@ -40,8 +40,11 @@ namespace Gameplay
             } 
             
             TimeBoost timeBoost = other.gameObject.GetComponent<TimeBoost>();
-            
-            if (timeBoost) timeBoost.IncrementTime(ref timeRemaining);
+
+            if (timeBoost)
+            {
+                timeBoost.IncrementTime(ref timeRemaining);
+            }
         }
 
         private void EndScene()
