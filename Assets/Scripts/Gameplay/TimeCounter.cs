@@ -20,6 +20,7 @@ namespace Gameplay
             if (timeRemaining <= 1)
             {
                 EndGaneObserver.Victory = false;
+                EndGaneObserver.RemainingTime = timeRemaining;
                 EndScene();
             }
             else
@@ -34,6 +35,7 @@ namespace Gameplay
             if (other.gameObject.name == "Goal")
             {
                 EndGaneObserver.Victory = true;
+                EndGaneObserver.RemainingTime = timeRemaining;
                 EndScene();
             } 
             
