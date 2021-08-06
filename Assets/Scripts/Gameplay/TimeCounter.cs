@@ -17,7 +17,7 @@ namespace Gameplay
         // Update is called once per frame
         void Update()
         {
-            if (timeRemaining <= 0)
+            if (timeRemaining <= 1)
             {
                 EndGaneObserver.Victory = false;
                 EndScene();

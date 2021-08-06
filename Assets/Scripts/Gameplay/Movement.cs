@@ -9,6 +9,9 @@ namespace Gameplay
         private float _yPosition;
         private bool _penaltyActivated = false;
         private float _penaltyTimeRemaining;
+        private bool _jumpActivated = false;
+        private float _currentYPosition;
+        private float _distanceJump;
 
         [SerializeField] public float speed;
         [SerializeField] public float angularVelocity;
@@ -18,6 +21,7 @@ namespace Gameplay
         {
             _transform = GetComponent<Transform>();
             _yPosition = _transform.position.y;
+            _currentYPosition = _yPosition;
         }
 
         // Update is called once per frame
@@ -40,6 +44,43 @@ namespace Gameplay
             Vector3 position = _transform.position;
             rotation.y = _transform.eulerAngles.y;
 
+            KeyInput(ref position, ref rotation);
+            HeightDistance(ref position);
+            
+            _transform.eulerAngles = rotation;
+            _transform.position = position;
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (!_penaltyActivated)
+            {
+                Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
+                
+                if (obstacle)
+                {
+                    _penaltyActivated = true;
+                    _penaltyTimeRemaining = obstacle.penaltyTime;
+                    Object.Destroy(other.gameObject);
+                }
+            }
+
+            if (!_jumpActivated)
+            {
+                 JumpBoost jumpBoost = other.gameObject.GetComponent<JumpBoost>();
+
+                if (jumpBoost)
+                {
+                    _jumpActivated = true;
+                    _distanceJump = jumpBoost.distanceJump;
+                    Object.Destroy(other.gameObject);
+                }
+            }
+        }
+
+        private void KeyInput(ref Vector3 position, ref Vector3 rotation)
+        {
+            
             if (Input.GetKey(KeyCode.W))
             {
                 position += _transform.forward * (speed * Time.deltaTime);
@@ -59,24 +100,35 @@ namespace Gameplay
             { 
                 rotation.y += angularVelocity * Time.deltaTime;
             }
-
-            _transform.eulerAngles = rotation;
-            position.y = _yPosition;
-            _transform.position = position;
         }
 
-        private void OnCollisionEnter(Collision other)
+        private void HeightDistance(ref Vector3 position)
         {
-            if (_penaltyActivated) return;
-
-            Obstacle obstacle = other.gameObject.GetComponent<Obstacle>();
-
-            if (obstacle)
+            if (_jumpActivated)
             {
-                _penaltyActivated = true;
-                _penaltyTimeRemaining = obstacle.penaltyTime;
-                Object.Destroy(other.gameObject);
+                if (_currentYPosition < _distanceJump)
+                {
+                    print("Jump!");
+                    _currentYPosition += speed * Time.deltaTime;
+                }
+                else
+                {
+                    _jumpActivated = false;
+                }
             }
+            else
+            {
+                if (_currentYPosition > _yPosition)
+                {
+                    _currentYPosition -= speed * Time.deltaTime;
+                }
+                else
+                {
+                    _currentYPosition = _yPosition;
+                }
+            }
+            
+            position.y = _currentYPosition;
         }
     }
 }
