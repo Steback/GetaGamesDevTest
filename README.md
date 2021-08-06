@@ -43,4 +43,10 @@ Este es el repositorio para la prueba técnica de desarrollador en Unity.
   cero. Deberá haber algún elemento gráfico o de UI que evidencia el resultado
   del juego (Si ganó o perdió)
 ![End Game](Images/EndGame.png)  
+  
+3. Añadir al modo de juego anterior 3 mecánicas de suelo.
+
+* Turbo o aumento de velocidad: Al ser tocado el kart aumentará su velocidad
+  durante un corto periodo de tiempo.
+![Speed Boost](Images/SpeedBoost.png)
 
